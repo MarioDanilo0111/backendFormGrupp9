@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onclick="getDataFromStrapi();">Get Posted Items:</button>
+    </div>
+
+    <div id="productFetched"></div>
+
+    <br />
+    <br />
+
+    <div>
+      <label for="user">Användarnamn:</label>
+      <input type="text" name="user" id="user" onchange="userValidate(this);" />
+      <div id="userError" class="errorInfo"></div>
+
+      <label for="pass">Lösenord:</label>
+      <input
+        type="password"
+        name="pass"
+        id="pass"
+        onchange="passValidate(this);"
+      />
+      <div id="passwordError" class="errorInfo"></div>
+    </div>
+
+    <br />
+    <br />
+
+    <div>
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        onchange="titelValidate(this)"
+      />
+      <div id="titelError" class="errorInfo"></div>
+    </div>
+    <div>
+      <label for="description">Description:</label>
+      <input type="text" name="description" id="description" />
+    </div>
+    <div>
+      <label for="price">Price:</label>
+      <input type="number" name="price" id="price" />
+    </div>
+    <div>
+      <label for="product">Product:</label>
+      <input type="text" name="product" id="product" />
+    </div>
+
+    <div>
+      <button onclick="postData()">Posta en product</button>
+    </div>
+  </body>
+</html>
